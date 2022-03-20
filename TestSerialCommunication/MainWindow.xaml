@@ -1,0 +1,35 @@
+﻿<Window x:Class="TestSerialCommunication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestSerialCommunication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <ComboBox Name="cbComPorts" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="155"/>
+        <Button Name="btnStartSerial" Content="Start" HorizontalAlignment="Left" Margin="183,10,0,0" VerticalAlignment="Top" Width="84" Height="22" Click="btnStartSerial_Click"/>
+
+        <TextBox Name="tbContentToSend" HorizontalAlignment="Left" Margin="295,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" Height="22"/>
+        <Button Name="btnSendSerial" Content="Send" HorizontalAlignment="Left" Margin="502,10,0,0" VerticalAlignment="Top" Height="22" Width="94" Click="btnSendSerial_Click"/>
+
+        <Button Name="btnClearLog" Content="Clear" HorizontalAlignment="Left" Margin="612,10,0,0" VerticalAlignment="Top" Height="22" Width="94" Click="btnClearLog_Click"/>
+
+
+        <Label Name="lblBuilderContent" Content=""  Background="#EEEEEE" Height="26" Margin="10,76,0,0" VerticalAlignment="Top"/>
+
+        <ListView Name="lvLog" Margin="10,137,10,10"/>
+        <Button x:Name="btnBuilderAddSOH" Content="SOH" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="22" Width="47" Click="btnBuilderAddSOH_Click"/>
+        <Button x:Name="btnBuilderAddSTX" Content="STX" HorizontalAlignment="Left" Margin="62,49,0,0" VerticalAlignment="Top" Height="22" Width="42" Click="btnBuilderAddSTX_Click"/>
+        <Button x:Name="btnBuilderAddACK" Content="ACK" HorizontalAlignment="Left" Margin="109,49,0,0" VerticalAlignment="Top" Height="22" Width="94" Click="btnBuilderAddACK_Click"/>
+        <Button x:Name="btnBuilderAddENQ" Content="ENQ" HorizontalAlignment="Left" Margin="208,49,0,0" VerticalAlignment="Top" Height="22" Width="94" Click="btnBuilderAddENQ_Click"/>
+        <Button x:Name="btnBuilderAddETX" Content="ETX" HorizontalAlignment="Left" Margin="306,49,0,0" VerticalAlignment="Top" Height="22" Width="94" Click="btnBuilderAddETX_Click"/>
+        <TextBox x:Name="tbBuilderContent" HorizontalAlignment="Left" Margin="405,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" Height="22"/>
+        <Button x:Name="btnBuilderAddContent" Content="Add" HorizontalAlignment="Left" Margin="594,49,0,0" VerticalAlignment="Top" Height="22" Width="48" Click="btnBuilderAddContent_Click"/>
+        <Button x:Name="btnBuilderClear" Content="Clear" HorizontalAlignment="Left" Margin="647,49,0,0" VerticalAlignment="Top" Height="22" Width="66" Click="btnBuilderClear_Click"/>
+        <Button x:Name="btnBuilderSend" Content="Send" HorizontalAlignment="Left" Margin="718,49,0,0" VerticalAlignment="Top" Height="22" Width="72" Click="btnBuilderSend_Click"/>
+
+        <ComboBox Name="cbMacros" DisplayMemberPath="Name" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="193"/>
+        <Button Name="btnUseMacro" Content="Use" HorizontalAlignment="Left" Margin="208,107,0,0" VerticalAlignment="Top" Height="22" Width="87" Click="btnUseMacro_Click"/>
+    </Grid>
+</Window>
